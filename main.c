@@ -7,11 +7,11 @@
  */
 int main(void)
 {
-    int fileNo;
+	int fileNo;
 
-    fileNo = isatty(STDIN_FILENO);
+	fileNo = isatty(STDIN_FILENO);
 
-    (fileNo == 0) ? no_interactive() : interactive();
+	(fileNo == 0) ? no_interactive() : interactive();
 
-    return (0);
+	return (0);
 }
