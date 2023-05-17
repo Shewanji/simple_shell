@@ -1,14 +1,14 @@
 # Simple Shell Project
 
-This is a simple UNIX command interpreter project written in C language. It is designed to work similarly to the `/bin/sh` shell and can handle basic shell commands. 
+This is a simple UNIX command interpreter project written in C language. It is designed to work similarly to the `/bin/sh` shell and can handle basic shell commands.
 
-## Background 
+## Background
 
-The project aims to help users understand the workings of a shell. It covers topics such as process identification (`pid`) and parent process identification (`ppid`), environment manipulation, process creation, system calls and functions, and the use of the `PATH` environment variable to locate programs. 
+The project aims to help users understand the workings of a shell. It covers topics such as process identification (`pid`) and parent process identification (`ppid`), environment manipulation, process creation, system calls and functions, and the use of the `PATH` environment variable to locate programs.
 
 ## List of allowed functions and system calls
 
-The following functions and system calls are allowed for this project: 
+The following functions and system calls are allowed for this project:
 
 - access
 - chdir
@@ -77,27 +77,27 @@ $
 
 ### Simple shell 0.1
 
-This version of the shell displays a prompt and waits for the user to enter a command. It can handle one-word commands only. 
+This version of the shell displays a prompt and waits for the user to enter a command. It can handle one-word commands only.
 
 ### Simple shell 0.1+
 
-This version of the shell can handle command lines with arguments. 
+This version of the shell can handle command lines with arguments.
 
 ### Simple shell 0.2+
 
-This version of the shell can handle the `PATH` environment variable and will not call `fork` if the command does not exist. 
+This version of the shell can handle the `PATH` environment variable and will not call `fork` if the command does not exist.
 
 ### Simple shell 0.3+
 
-This version of the shell implements the `exit` built-in, which allows the user to exit the shell. 
+This version of the shell implements the `exit` built-in, which allows the user to exit the shell.
 
 ### Simple shell 1.0
 
-This version of the shell implements the `env` built-in, which prints the current environment. 
+This version of the shell implements the `env` built-in, which prints the current environment.
 
 ## Collaborators
 
-- [JoseKariz](https://github.com/Josekariz) :smiley: 
-- [Marrionette](https://github.com/Shewanji) :star: 
+- [JoseKariz](https://github.com/Josekariz) :smiley:
+- [Marrionette](https://github.com/Shewanji) :star:
 
 We hope this project helps you in understanding the basics of shell programming. Happy coding! :rocket:
