@@ -21,17 +21,3 @@ void createFile(const char *filename)
 	close(fd);
 }
 
-/**
- * main - Entry point of the program.
- *
- * Return: 0 on success.
- */
-int main(void)
-{
-	const char *filename = "example_file";
-
-	createFile(filename);
-
-	return (0);
-}
-
