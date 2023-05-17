@@ -7,5 +7,8 @@
 #include <stdio.h>
 #include <unistd.h>
 
+void interactive(void);
+
+
 
 #endif

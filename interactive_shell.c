@@ -1,12 +1,11 @@
 #include "shell.h"
-#include <unistd.h>
 
 /**
  * shell_interactive - UNIX command line interpreter
  *
  * Return: void
  */
-void shell_interactive(void)
+void interactive(void)
 {
 	char *line;
 	char **args;
