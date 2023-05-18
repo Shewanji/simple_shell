@@ -6,6 +6,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <stddef.h>
 
 void interactive(void);
 
