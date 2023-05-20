@@ -7,15 +7,15 @@
  */
 char *read_line(void)
 {
-    char *line = NULL;
-    size_t buffsize = 0;
-    ssize_t countcharNo;
+	char *line = NULL;
+	size_t buffsize = 0;
+	ssize_t countcharNo;
 
-    countcharNo = getline(&line, &buffsize, stdin);
-    if (countcharNo == -1)
-    {
-        if (feof(stdin))
-        {
+	countcharNo = getline(&line, &buffsize, stdin);
+	if (countcharNo == -1)
+	{
+		if (feof(stdin))
+		{
             free(line);
             exit(EXIT_SUCCESS);
         }
