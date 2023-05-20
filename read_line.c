@@ -2,7 +2,6 @@
 
 /**
  * read_line - Read a line from standard input
- *
  * Return: Pointer that points to a string with the line content
  */
 char *read_line(void)
@@ -16,15 +15,15 @@ char *read_line(void)
 	{
 		if (feof(stdin))
 		{
-            free(line);
-            exit(EXIT_SUCCESS);
-        }
-        else
-        {
-            free(line);
-            perror("Error while reading the line from stdin");
-            exit(EXIT_FAILURE);
-        }
-    }
-    return (line);
+			free(line);
+			exit(EXIT_SUCCESS);
+		}
+		else
+		{
+			free(line);
+			perror("Error while reading the line from stdin");
+			exit(EXIT_FAILURE);
+		}
+	}
+	return (line);
 }
