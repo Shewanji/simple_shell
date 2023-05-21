@@ -1,5 +1,5 @@
 #include "shell.h"
-#define TOK_DELIM " \t\r\n\a"
+
 
 /**
  * resizeTokens - Resizes the tokens array if necessary.
@@ -31,7 +31,7 @@ char **split_line(char *line)
 	int bufsize = 64;
 	int i = 0;
 	char **tokens = malloc(bufsize * sizeof(char *));
-	char *token, *saveptr;
+	char *token;
 
 	if (!tokens)
 		exit(EXIT_FAILURE);

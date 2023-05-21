@@ -8,6 +8,7 @@
 #include <unistd.h>
 #include <stddef.h>
 #include <sys/wait.h>
+#include <sys/types.h> 
 
 /*PROTOTYPES*/
 /*main.c*/
@@ -28,6 +29,10 @@ int own_env(char **args);
 
 /*MACROS*/
 #define TOK_DELIM " \t\r\n\a\""
+
+/*test*/
+int no_interactive(void);
+extern char **environ;
 
 
 #endif
