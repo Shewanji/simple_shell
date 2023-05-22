@@ -12,6 +12,7 @@
 /*PROTOTYPES*/
 /*main.c*/
 void interactive(void);
+void no_interactive(void);
 
 /*interactive_shell.c*/
 char *read_line(void);
@@ -28,7 +29,7 @@ int my_cd(char **args);
 
 /*MACROS*/
 #define TOK_DELIM " \t\r\n\a\""
-char **environ;
+extern char **environ;
 
 
 #endif
