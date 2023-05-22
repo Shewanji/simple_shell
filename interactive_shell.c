@@ -28,4 +28,3 @@ void interactive(void)
 		}
 	} while (status == -1);
 }
-

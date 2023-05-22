@@ -11,7 +11,14 @@ int main(void)
 
 	fileNo = isatty(STDIN_FILENO);
 
-	(fileNo == 0) ? no_interactive() : interactive();
+	if (fileNo == 0)
+	{
+		no_interactive();
+	}
+	else
+	{
+		interactive();
+	}
 
 	return (0);
 }
