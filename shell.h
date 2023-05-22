@@ -27,6 +27,9 @@ int my_env(char **args);
 int my_exit(char **args);
 int my_cd(char **args);
 
+/* custom_strcmp */
+int _strcmp(const char *str1, const char *str2);
+
 /*MACROS*/
 #define TOK_DELIM " \t\r\n\a\""
 extern char **environ;

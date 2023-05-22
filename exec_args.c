@@ -33,7 +33,7 @@ int execute_args(char **args)
     /* if there is a match execute the builtin command */
 	for (i = 0; i < num_builtins; i++)
 	{
-	if (strcmp(args[0], builtin_func_list[i]) == 0)
+	if (_strcmp(args[0], builtin_func_list[i]) == 0)
 	{
 
 	int (*builtin_func_ptr)(char **) = builtin_func[i];
