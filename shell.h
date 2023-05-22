@@ -22,12 +22,13 @@ int execute_args(char **args);
 int new_process(char **args);
 
 /*Builtin functions*/
-int own_cd(char **args);
-int own_exit(char **args);
-int own_env(char **args);
+int my_env(char **args);
+int my_exit(char **args);
+int my_cd(char **args);
 
 /*MACROS*/
 #define TOK_DELIM " \t\r\n\a\""
+char **environ;
 
 
 #endif
