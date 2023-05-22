@@ -31,7 +31,7 @@ int execute_args(char **args)
 	num_builtins = sizeof(builtin_func_list) / sizeof(char *);
 
     /* if there is a match execute the builtin command */
-	for ( i = 0; i < num_builtins; i++)
+	for (i = 0; i < num_builtins; i++)
 	{
 	if (strcmp(args[0], builtin_func_list[i]) == 0)
 	{
