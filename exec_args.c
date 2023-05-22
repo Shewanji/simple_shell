@@ -15,7 +15,7 @@ int execute_args(char **args)
 	};
 	int (*builtin_func[])(char **) = {
 		&own_cd,
-		/*&own_env,*/
+		&own_env,
 		&own_exit
 	};
 
