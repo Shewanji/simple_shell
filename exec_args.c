@@ -9,33 +9,36 @@
 int execute_args(char **args)
 {
 	char *builtin_func_list[] = {
-		"cd",
 		"env",
+		"cd",
 		"exit"
 	};
 	int (*builtin_func[])(char **) = {
-		&own_cd,
-		&own_env,
-		&own_exit
+		&my_env,
+		&my_cd,
+		&my_exit
 	};
 
-	unsigned long int i = 0;
+	int i = 0;
+	int num_builtins;
+
 
     /* empty command was entered */
-	return (args[0] == NULL ? -1 : 0);
+	if (args[0] == NULL)
+		return (-1);
 
     /* find if the command is a builtin */
-	int num_builtins = sizeof(builtin_func_list) / sizeof(char *);
+	num_builtins = sizeof(builtin_func_list) / sizeof(char *);
 
     /* if there is a match execute the builtin command */
-	for (int i = 0; i < num_builtins; i++)
+	for (i = 0; i < num_builtins; i++)
 	{
 	if (strcmp(args[0], builtin_func_list[i]) == 0)
 	{
 
-	int (*builtin_func)(char **) = builtin_func[i];
+	int (*builtin_func_ptr)(char **) = builtin_func[i];
 
-	return ((*builtin_func)(args));
+	return ((*builtin_func_ptr)(args));
 	}
 }
 

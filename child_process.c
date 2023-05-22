@@ -12,33 +12,26 @@ int new_process(char **args)
 	int status;
 
 	pid = fork();
-	if (pid == -1)
+	if (pid ==  0)
 	{
-		perror("error in new_process: forking");
-		return (0);  /* Return 0 to indicate failure */
-	}
-	else if (pid == 0)
-	{
-	/* child process */
-		char *envp[] = { NULL };  /* NULL-terminated environment variable list */
-
-	if (execve(args[0], args, envp) == -1)
-	{
-		perror("error in new_process: execve");
+		/* child process */
+		if (execvp(args[0], args) == -1)
+		{
+			perror("error in new_process: child process");
+		}
 		exit(EXIT_FAILURE);
 	}
+	else if (pid < 0)
+	{
+		/* error forking */
+		perror("error in new_process: forking");
 	}
 	else
 	{
-	/* parent process */
-	do {
-		if (waitpid(pid, &status, WUNTRACED) == -1)
-		{
-			perror("error in new_process: waitpid");
-			return (0);  /* Return 0 to indicate failure */
-		}
-	} while (!WIFEXITED(status) && !WIFSIGNALED(status));
+		/* parent process */
+		do {
+			waitpid(pid, &status, WUNTRACED);
+		} while (!WIFEXITED(status) && !WIFSIGNALED(status));
 	}
-	return (1);  /* Return 1 to indicate success */
+	return (-1);
 }
-
