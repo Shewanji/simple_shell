@@ -30,6 +30,8 @@ int my_cd(char **args);
 /* custom_strcmp */
 int _strcmp(const char *str1, const char *str2);
 
+/* custom_getline */
+
 /*MACROS*/
 #define TOK_DELIM " \t\r\n\a\""
 extern char **environ;
