@@ -10,6 +10,7 @@ int custom_getchar(void)
 	static char buffer[BUFSIZ];
 	static char *buffer_ptr = buffer;
 	static int buffer_count;
+	int result;
 
 	if (buffer_count == 0)
 	{
@@ -24,7 +25,7 @@ int custom_getchar(void)
 		buffer_ptr = buffer;
 	}
 
-	int result = (int)(*buffer_ptr);
+	result = (int)(*buffer_ptr);
 
 	buffer_ptr++;
 	buffer_count--;
