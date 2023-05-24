@@ -39,7 +39,7 @@ char **split_line(char *line)
 	while (*line != '\0')
 	{
 		while (*line == ' ' || *line == '\t' || *line == '\r' ||
-		       *line == '\n' || *line == '\a')
+		       *line == '\n' || *line == ';' || *line == '\a')
 			line++;
 
 		if (*line == '#' || *line == '\0')
@@ -50,7 +50,7 @@ char **split_line(char *line)
 		token = line;
 		while (*line != ' ' && *line != '\t' && *line != '\r' &&
 		       *line != '\n' && *line != '\a' && *line != '#' &&
-		       *line != '\0')
+		       *line != '\0' && *line != ';')
 			line++;
 
 		if (*line != '\0')
