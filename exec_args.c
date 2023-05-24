@@ -11,12 +11,12 @@ int execute_args(char **args)
 	char *builtin_func_list[] = {
 		"env",
 		"cd",
-		"exit"
+		"exit",
 	};
 	int (*builtin_func[])(char **) = {
 		&my_env,
 		&my_cd,
-		&my_exit
+		&my_exit,
 	};
 
 	int i = 0;
