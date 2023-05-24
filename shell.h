@@ -39,6 +39,10 @@ char *_stream(void);
 /*custom_getchar*/
 int custom_getchar(void);
 
+/*custom_atoi*/
+int custom_atoi(const char *str);
+
+
 /*MACROS*/
 #define TOK_DELIM " \t\r\n\a\""
 extern char **environ;

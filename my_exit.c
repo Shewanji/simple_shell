@@ -11,7 +11,7 @@ int my_exit(char **args)
 	/* exit with status */
 	if (args[1])
 	{
-		return (atoi(args[1]));
+		return (custom_atoi(args[1]));
 	}
 	/* exit success */
 	else
